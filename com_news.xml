@@ -1,9 +1,9 @@
-<?xml version="1.0"encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 
 <extension type="component" version="3.3" method="upgrade">
 
     <name>COM_NEWS</name>
-    <crationDate>20.04.2021</crationDate>
+    <crationDate>april 2021</crationDate>
     <author>Newgot</author>
     <authorEmail>newgot@mail.ru</authorEmail>
     <authorUrl>https://github.com/Newgot</authorUrl>
@@ -41,9 +41,9 @@
             <folder>views</folder>
             <folder>models</folder>
             <folder>controllers</folder>
-            <folder>sql</folder>
             <folder>language</folder>
             <folder>tables</folder>
+            <folder>sql</folder>
 
             <filename>news.php</filename>
             <filename>controller.php</filename>
