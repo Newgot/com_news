@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <form>
-    <fieldsrt name="details" label="COM_NEWS_ITEM_DETAILS">
+    <fieldset name="details" label="COM_NEWS_ITEM_DETAILS">
         <field name="id" type="hidden"/>
         <field
                 name="title"
                 type="text"
-                label="NEWS_COM_ITEM_TITLE_DESC"
+                label="COM_NEWS_ITEM_TITLE_DESC"
                 size="40"
                 class="inputbox"
                 required="true"
@@ -20,6 +20,18 @@
                 description="COM_NEWS_ITEM_ALIAS_DESCRIPTION"
         />
         <field
+                name="published"
+                type="list"
+                label="JSTATUS"
+                description="JFIELD_PUBLISHED_DESC"
+                class="chzn-color-state"
+                size="1"
+                default="1"
+        >
+            <option value="1">JPUBLISHED</option>
+            <option value="0">JUNPUBLISHED</option>
+        </field>
+        <field
                 name="text"
                 type="editor"
                 label="COM_NEWS_ITEM_TEXT"
@@ -27,26 +39,14 @@
                 button="true"
         />
         <field
-                name="published"
-                type="list"
-                label="JSTATUS"
-                description="JFIELD_PUBLISHED_DESC"
-                size="1"
-                default="1"
-        >
-            <option value="1">JPUBLISED</option>
-            <option value="0">JUNPUBLISED</option>
-        </field>
-        <field
                 name="publish_up"
                 type="calendar"
-                default="2017-05-15"
+                default="NOW"
                 label="COM_NEWS_PUBLISH_UP_LABEL"
                 description="COM_NEWS_PUBLISH_UP_DESCRIPTION"
-                format="%Y-$m-$d $H:%M:%S"
+                format="%Y-%m-%d %H:%M:%S"
                 size="22"
         />
-        <field/>
         <fields name="images">
             <field
                     name="image1"
@@ -55,5 +55,5 @@
                     description="COM_NEWS_ITEM_IMG_DESCRIPTION"
             />
         </fields>
-    </fieldsrt>
+    </fieldset>
 </form>

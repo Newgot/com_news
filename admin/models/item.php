@@ -11,7 +11,7 @@ class NewsModelItem extends JModelAdmin
             'item',
             [
                 'control' => 'jform',
-                'load_data' => $loadData
+                'load_data' => $loadData,
             ]
         );
         if (empty($form)) {
