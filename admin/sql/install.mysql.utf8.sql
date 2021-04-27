@@ -6,4 +6,4 @@ CREATE TABLE IF NOT EXISTS `#__news` (
     `images` varchar(1024) NOT NULL DEFAULT '',
     `publish_up` datetime,
     `alias` varchar(45)
-    )
+    ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci
