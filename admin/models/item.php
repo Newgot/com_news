@@ -21,6 +21,15 @@ class NewsModelItem extends JModelAdmin
 
     }
 
+    public function getTable($type='Item', $prefix='NewsTable', $config = []){
+        return JTable::getInstance($type, $prefix, $config);
+    }
+
+    protected function prepareTable()
+    {
+
+    }
+
     public function getItem()
     {
         return true;
