@@ -16,7 +16,18 @@ defined('_JEXEC') or exit();
         </tr>
         </thead>
         <tbody>
-
+        <? if (isset($this->items)) : ?>
+            <? foreach ($this->items as $i => $item): ?>
+                <? $link = 'index.php?option=com_news&task=item.edit&id=' . $item->id ?>
+                <tr>
+                    <td><?= $this->pagination->getRowOffset($i) ?></td>
+                    <td><?= JHtml::_('grid.id', $i, $item->id) ?></td>
+                    <td align="center"><a href="<?= $link ?>"><?= $item->title ?></a></td>
+                    <td align="center"><?= JHtml::_('jgrid.published', $item->published, $i, 'news.', true); ?></a></td>
+                    <td align="center"><?= $item->id ?></td>
+                </tr>
+            <? endforeach ?>
+        <? endif ?>
         </tbody>
         <tfoot>
         <tr>
@@ -25,5 +36,6 @@ defined('_JEXEC') or exit();
         </tfoot>
     </table>
     <input type="hidden" name="task" value=""/>
+    <input type="hidden" name="boxchecked" value="0"/>
     <?= JHtml::_('form.token') ?>
 </form>

@@ -4,9 +4,13 @@ defined('_JEXEC') or exit();
 
 class NewsViewNews extends JViewLegacy
 {
+    protected $items;
+    protected $pagination;
 
     public function display($tpl = '')
     {
+        $this->items = $this->get('Items');  // getItems
+        $this->pagination = $this->get('Pagination');  // getPagination
         $this->addToolBar();
         parent::display();
         $this->setDocument();
